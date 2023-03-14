@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M169WZK349"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M169WZK349");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/favicon-final.webp" />
+    <title>Native Dialogues</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.js"></script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", init);
+
+      function taggedConfirm(strings, input) {
+        return `${strings[0]}${input}`;
+      }
+
+      function taggedPromptUnsafe(strings, input) {
+        return `${strings[0]}${input}`;
+      }
+
+      function taggedPromptSafe(strings, input) {
+        return DOMPurify.sanitize(`${strings[0]}${input}`);
+      }
+
+      function init() {
+        initAlert = document
+          .getElementById("alert-btn")
+          .addEventListener("click", () => {
+            alert("This is an example of a built-in alert");
+          });
+
+        initConfirm = document
+          .getElementById("confirm-btn")
+          .addEventListener("click", () => {
+            input = confirm("Sample Confirm");
+            document.getElementById(
+              "main-output"
+            ).innerHTML = taggedConfirm`The value returned by the confirm method is ${input}`;
+          });
+
+        initPrompt = document
+          .getElementById("prompt-btn")
+          .addEventListener("click", () => {
+            input = prompt("Sample Unsafe Prompt");
+
+            if (!input) {
+              document.getElementById("main-output").innerHTML =
+                "User didn't enter anything";
+            } else {
+              document.getElementById(
+                "main-output"
+              ).innerHTML = taggedPromptUnsafe`The value returned by the unsafe prompt method is: ${input}`;
+            }
+          });
+
+        initSafePrompt = document
+          .getElementById("safer-prompt-btn")
+          .addEventListener("click", () => {
+            input = prompt("Sample Safe Prompt");
+
+            if (!input) {
+              document.getElementById("main-output").innerHTML =
+                "User didn't enter anything";
+            } else {
+              document.getElementById(
+                "main-output"
+              ).innerHTML = taggedPromptSafe`The value returned by the unsafe prompt method is: ${input}`;
+            }
+          });
+      }
+    </script>
+
+    <h1>Native Dialogues</h1>
+
+    <button id="alert-btn">Alert</button>
+    <button id="confirm-btn">Confirm</button>
+    <button id="prompt-btn">Prompt</button>
+    <button id="safer-prompt-btn">Safer Prompt</button>
+    <br />
+    <br />
+    <output id="main-output"></output>
+  </body>
+</html>

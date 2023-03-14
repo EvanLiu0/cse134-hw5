@@ -1,0 +1,290 @@
+:root {
+  --primary-text-color: rgb(0, 0, 0);
+  --container-text-color: rgb(255, 255, 255);
+  --nav-text-color: rgb(255, 255, 255);
+  --secondary-text-color: rgb(255, 255, 120);
+  --font-family-main: "Moulpali", serif, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Moulpali";
+  src: url("../fonts/Moulpali/Moulpali-Regular.ttf");
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* nav picture {
+          visibility: hidden;
+          border: 1px solid red;
+        }
+        
+        nav > * + * {
+          visibility: visible;
+          border: 1px solid orange;
+          padding: 0.3rem;
+        } */
+
+/** Nav Stuff **/
+.nav-container {
+  background: #11213e;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  color: var(--nav-text-color);
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+nav {
+  padding: 1.1rem 0 0 0;
+}
+
+.title {
+  float: left;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+nav a {
+  float: right;
+  margin: 0rem 1rem;
+  position: relative;
+  color: var(--nav-text-color);
+  text-decoration: none;
+}
+
+header nav a:hover {
+  font-weight: bold;
+  color: var(--secondary-text-color) !important;
+}
+
+nav a:hover {
+  color: var(--secondary-text-color) !important;
+}
+
+@media screen and (max-width: 730px) {
+  .title {
+    font-size: 1.5rem;
+    padding-top: 1.5%;
+  }
+
+  header nav a {
+    font-size: 0.8rem;
+    padding-top: 0.5%;
+    margin: 0rem 0.6rem;
+  }
+
+  .nav-container {
+    padding: 0.5rem 0rem 0.5rem 1rem;
+  }
+
+  #image-container {
+    gap: 0.5rem !important;
+  }
+
+  img {
+    width: 50ch !important;
+    height: 30ch !important;
+  }
+
+  aside p {
+    margin-bottom: 0.5rem !important;
+  }
+
+  main p,
+  ol,
+  figcaption {
+    font-size: 0.8rem !important;
+  }
+
+  code {
+    font-size: 0.5rem !important;
+  }
+
+  main section {
+    max-width: 60ch !important;
+    margin-left: 0.5rem !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 0.9rem !important;
+    padding-top: 2% !important;
+  }
+
+  header nav a {
+    font-size: 0.65rem !important;
+  }
+
+  nav {
+    padding: 0.6rem 0 0 0 !important;
+  }
+
+  /* main {
+      height: 90vh;
+    } */
+
+  img {
+    width: 40ch !important;
+    height: 20ch !important;
+  }
+
+  aside p {
+    margin-bottom: 0.2rem !important;
+  }
+
+  main p,
+  ol,
+  figcaption {
+    font-size: 0.7rem !important;
+  }
+
+  code {
+    font-size: 0.4rem !important;
+  }
+
+  main section {
+    margin-left: 1rem !important;
+    max-width: 45ch !important;
+  }
+}
+/***************/
+
+h1 a {
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 5vw;
+  line-height: 2 !important;
+}
+
+h3 {
+  color: white;
+}
+
+h4 {
+  color: var(--container-text-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+body {
+  background: #ffffff;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-family-main);
+}
+
+main {
+  animation: fade-in 0.75s;
+  padding: 2rem;
+  padding-right: 9rem !important;
+}
+
+footer {
+  color: var(--primary-text-color);
+  background-color: #11213e;
+  padding: 0.4rem 1rem 1rem 1rem;
+}
+
+button:hover {
+  background: var(--secondary-text-color);
+}
+
+.footer-icon {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  margin-right: 1rem !important;
+  cursor: pointer !important;
+}
+
+section {
+  padding: 2rem 2rem 2rem 2rem;
+  width: 100%;
+  border-left: 1px solid white;
+}
+
+section p {
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+section a:hover {
+  text-decoration: none;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+summary {
+  margin: 0rem 0rem 1rem 0rem;
+  color: var(--container-text-color);
+}
+
+details p {
+  margin-left: 2rem;
+}
+
+em {
+  font-style: normal;
+  color: var(--secondary-text-color);
+}
+
+p + hr {
+  color: var(--secondary-text-color);
+  margin: 2rem 0rem 2rem 0rem;
+}
+
+.active {
+  color: var(--secondary-text-color) !important;
+}
+
+aside p {
+  margin-bottom: 2rem;
+}
+
+aside + img {
+  margin: 1rem auto !important;
+}
+
+ol {
+  margin-left: 2rem;
+}
+
+video {
+  margin: 2rem 0rem 0rem 0rem;
+  width: 80%;
+  max-width: 60ch;
+  height: auto;
+}
+
+main section {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: lightgray;
+  max-width: 80ch;
+  overflow: scroll;
+}
+
+code {
+  font-size: 0.6rem;
+}

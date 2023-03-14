@@ -1,0 +1,288 @@
+:root {
+  --primary-text-color: rgb(255, 255, 255);
+  --primary-body-color: #11213e;
+  --nav-text-color: rgb(255, 255, 255);
+  --secondary-text-color: rgb(255, 255, 120);
+  --font-family-main: "Moulpali", serif, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Moulpali";
+  src: url("../fonts/Moulpali/Moulpali-Regular.ttf");
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* nav picture {
+    visibility: hidden;
+    border: 1px solid red;
+  }
+  
+  nav > * + * {
+    visibility: visible;
+    border: 1px solid orange;
+    padding: 0.3rem;
+  } */
+
+/** Nav Stuff **/
+.nav-container {
+  background: #11213e;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  color: var(--nav-text-color);
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+nav {
+  padding: 1.1rem 0 0 0;
+}
+
+.title {
+  float: left;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+nav a {
+  float: right;
+  margin: 0rem 1rem;
+  position: relative;
+  color: var(--nav-text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: var(--secondary-text-color);
+}
+
+@media screen and (max-width: 850px) {
+  .title {
+    font-size: 1.5rem;
+    padding-top: 1.5%;
+  }
+
+  header nav a {
+    font-size: 0.8rem;
+    padding-top: 0.5%;
+    margin: 0rem 0.6rem;
+  }
+
+  .nav-container {
+    padding: 0.5rem 0rem 0.5rem 1rem;
+  }
+
+  main {
+    height: 100vh !important;
+  }
+
+  figure {
+    transform: scale(0.8);
+    min-width: 30ch;
+    max-height: 27ch;
+  }
+
+  #image-container {
+    gap: 0.5rem !important;
+  }
+
+  main figure:hover {
+    transform: scale(0.9) !important;
+  }
+
+  figcaption p {
+    font-size: 0.8rem !important;
+  }
+
+  figcaption h4 {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .title {
+    font-size: 0.9rem;
+    padding-top: 2%;
+  }
+
+  header nav a {
+    font-size: 0.65rem;
+  }
+
+  nav {
+    padding: 0.6rem 0 0 0 !important;
+  }
+
+  main {
+    height: 90vh !important;
+  }
+
+  figure {
+    transform: scale(0.8);
+  }
+
+  #image-container {
+    width: 120%;
+    gap: 0rem !important;
+  }
+
+  main figure:hover {
+    transform: scale(0.9) !important;
+  }
+
+  figcaption p {
+    font-size: 0.8rem !important;
+    text-align: center;
+  }
+
+  figcaption h4 {
+    font-size: 0.8rem !important;
+    text-align: center;
+  }
+
+  figure img {
+    width: 0 !important;
+  }
+}
+
+nav {
+  padding: 1.1rem 0 0 0;
+}
+/***************/
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-family-main);
+}
+
+main {
+  animation: fade-in 0.75s;
+  width: 100%;
+  height: 120vh;
+  color: var(--primary-text-color);
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.footer-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--secondary-text-color) !important;
+}
+
+.footer-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+footer {
+  color: var(--primary-text-color);
+  background-color: var(--primary-body-color);
+  padding: 0.4rem 1rem 1rem 1rem;
+}
+
+h1 a {
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+
+h2 {
+  font-weight: bold;
+  color: black;
+  font-size: 5.5vw;
+  font-family: inherit;
+}
+
+main figure {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  transition: 0.5s;
+  max-width: 130ch;
+  margin: 0 3rem;
+}
+
+main figure:hover {
+  transform: scale(1.05);
+}
+
+#image-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+figcaption {
+  width: 70%;
+  max-width: 110ch;
+  background-color: #11213e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+}
+
+figure img {
+  width: 200px;
+  height: 200px;
+}
+
+figcaption h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--secondary-text-color);
+}
+
+figcaption a:hover {
+  text-decoration: none;
+}
+
+figcaption p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+
+h4 a,
+h4 a:visited {
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+}
+
+p a,
+p a:visited {
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--primary-text-color);
+}
+
+figure:hover {
+  cursor: pointer;
+}

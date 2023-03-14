@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M169WZK349"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M169WZK349");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evan Liu's Portfolio</title>
+    <!-- Image Credit: https://stock.adobe.com/images/letter-e-glitch-style-alphabet-modern-font-logo-vector-icon/252746757 -->
+    <link rel="icon" href="./assets/images/favicon-final.webp" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+  </head>
+  <body>
+    <header class="nav-container">
+      <h1 class="title">
+        <a href="./index.html">Evan Liu's Portfolio</a>
+      </h1>
+      <nav>
+        <!-- <picture
+          ><img src="./assets/images/hamburger.png" alt="Hamburger Menu"
+        /></picture> -->
+        <a href="./projects.html">Past Projects</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./about.html">About</a>
+        <a class="active" href="./index.html">Home</a>
+      </nav>
+    </header>
+    <main>
+      <div id="hero">
+        <!-- Image Credit: https://wallpaper.dog/blue-technology-wallpapers -->
+        <img
+          id="hero-image"
+          src="./assets/images/tech.webp"
+          alt="Hero Technology Background"
+        />
+
+        <!-- The span below will eventually be used to add color and weight to my name when styling is allowed -->
+
+        <section id="hero-body">
+          <h2 id="hero-title">Hi, I'm <span class="impact">Evan</span></h2>
+          <p>
+            I'm a software engineer specializing in creating meaningful and
+            accessible online tools for users of all kinds. Currently, I work
+            with the
+            <b
+              ><a href="https://www.deleteyourdata.com"
+                >Neon Law Foundation</a
+              ></b
+            >
+            to help people protect their online identities and cybersecurity
+            rights.
+          </p>
+          <br />
+          <p>
+            I'm passionate about designing impactful applications for people
+            that need them, and I'm always looking for opportunities to learn
+            new skills to better help those around me.
+          </p>
+          <!-- Onclick to be written and implemented when JS permitted -->
+          <button onclick="location.href='./projects.html';">
+            Check Out My Past Projects!
+          </button>
+        </section>
+      </div>
+    </main>
+    <hr />
+    <footer>
+      <h3>Let's Get in Touch!</h3>
+      <!-- Image Credit: https://iconsplace.com/white-icons/linkedin-icon-18/ -->
+      <a href="https://www.linkedin.com/in/evan-liu-195bba22a"
+        ><img
+          class="footer-icon"
+          src="./assets/images/linkedin-white.webp"
+          alt="Linkedin Logo"
+          title="LinkedIn"
+      /></a>
+      <!-- Image Credit: https://www.pngkey.com/maxpic/u2w7q8w7a9u2r5t4/ -->
+      <a href="https://github.com/EvanLiu0"
+        ><img
+          class="footer-icon"
+          src="./assets/images/github-white.webp"
+          alt="GitHub Logo"
+          title="GitHub"
+      /></a>
+    </footer>
+  </body>
+</html>

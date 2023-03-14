@@ -1,0 +1,256 @@
+:root {
+  --primary-text-color: rgb(0, 0, 0);
+  --primary-body-color: #11213e;
+  --nav-text-color: rgb(255, 255, 255);
+  --secondary-text-color: rgb(255, 255, 120);
+  --font-family-main: "Moulpali", serif, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Moulpali";
+  src: url("../fonts/Moulpali/Moulpali-Regular.ttf");
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/** Nav Stuff **/
+.nav-container {
+  background: #11213e;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  color: var(--nav-text-color);
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+nav {
+  padding: 1.1rem 0 0 0;
+}
+
+.title {
+  float: left;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+nav a {
+  float: right;
+  margin: 0rem 1rem;
+  position: relative;
+  color: var(--nav-text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: var(--secondary-text-color);
+}
+
+@media screen and (max-height: 700px) {
+  form {
+    transform: scale(0.9) !important;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .title {
+    font-size: 1.5rem;
+    padding-top: 1.5%;
+  }
+
+  header nav a {
+    font-size: 0.8rem;
+    padding-top: 0.5%;
+    margin: 0rem 0.6rem;
+  }
+
+  .nav-container {
+    padding: 0.5rem 0rem 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 0.9rem;
+    padding-top: 2%;
+  }
+
+  header nav a {
+    font-size: 0.65rem;
+  }
+
+  nav {
+    padding: 0.6rem 0 0 0;
+  }
+
+  form {
+    transform: scale(0.8);
+  }
+}
+/***************/
+
+h1 a {
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 5vw;
+  line-height: 5rem;
+}
+
+h3 {
+  color: white;
+}
+
+body {
+  background: #ffffff;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-family-main);
+}
+
+main {
+  padding: 2rem;
+  animation: fade-in 0.75s;
+  height: 110vh;
+}
+
+footer {
+  color: var(--primary-text-color);
+  background-color: #11213e;
+  padding: 0.4rem 1rem 1rem 1rem;
+}
+
+fieldset {
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-body-color);
+  color: rgb(255, 255, 255);
+}
+
+button {
+  margin-top: 3rem;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--secondary-text-color);
+}
+
+.footer-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+select {
+  width: 50%;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 0.65rem;
+}
+
+legend {
+  width: auto;
+  margin: 0rem auto 0rem;
+  font-size: 1.5rem;
+  background-color: #669bff;
+}
+
+label {
+  color: var(--secondary-text-color);
+}
+
+.label-input-container {
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.label-input-container input {
+  margin: 0rem 0rem 0rem 0.5rem;
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 0.65rem;
+}
+
+.label-input-container textarea {
+  margin: 0rem 0rem 0rem 0.5rem;
+  width: 10rem;
+  height: 2rem;
+  padding: 1rem;
+}
+
+input[type="submit"] {
+  margin: 2rem 0rem 1.5rem;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#form-title-contact {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0rem 1rem 0rem;
+  text-align: center;
+}
+
+form {
+  max-width: 80ch;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.active {
+  color: var(--secondary-text-color) !important;
+}
+
+dialog {
+  text-align: center;
+  position: absolute;
+  top: 50vh;
+  left: 30vw;
+  margin-top: -50px;
+  margin-left: -50px;
+  padding: 5ch 1ch 1ch 1ch;
+  background-color: var(--secondary-text-color);
+}
+
+dialog button {
+  border: 1.5px solid black;
+  margin: 2ch 2ch;
+}
+
+dialog button:hover {
+  background-color: rgb(255, 255, 223);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/favicon-final.webp" />
+    <link rel="stylesheet" href="./assets/styles/methodtest.css" />
+    <title>Method Test</title>
+  </head>
+  <body>
+    <script type="module">
+      import { sendThatStuff } from "./methodtest.js";
+      document.sendThatStuff = sendThatStuff;
+    </script>
+    <h1>Method Test</h1>
+    <form>
+      <fieldset>
+        <legend>Ajax Methods</legend>
+        <section>
+          <label for="id">ID: </label>
+          <input type="text" id="id" name="id" />
+        </section>
+        <section>
+          <label for="article_name">Article Name: </label>
+          <input type="text" id="article_name" name="article_name" />
+        </section>
+        <section>
+          <label for="id">Article Body: </label>
+          <textarea id="article_body" name="article_body"></textarea>
+        </section>
+        <section id="radio-container">
+          <input type="radio" id="XHR" name="reqtype" />
+          <label for="XHR">XMLHTTPRequest</label>
+          <input type="radio" id="Fetch" name="reqtype" />
+          <label for="Fetch">Fetch</label>
+        </section>
+        <input type="hidden" id="date" name="date" />
+        <input
+          type="button"
+          id="getBtn"
+          name="getBtn"
+          value="GET"
+          onclick="sendThatStuff('get')"
+        />
+        <input
+          type="button"
+          id="postBtn"
+          name="postBtn"
+          value="POST"
+          onclick="sendThatStuff('post')"
+        />
+        <input
+          type="button"
+          id="putBtn"
+          name="putBtn"
+          value="PUT"
+          onclick="sendThatStuff('put')"
+        />
+        <input
+          type="button"
+          id="deleteBtn"
+          name="deleteBtn"
+          value="DELETE"
+          onclick="sendThatStuff('delete')"
+        />
+      </fieldset>
+    </form>
+    <output id="response" name="response">&nbsp;</output>
+  </body>
+</html>

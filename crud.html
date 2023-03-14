@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M169WZK349"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M169WZK349");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/favicon-final.webp" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.js"></script>
+    <script type="module">
+      import {
+        initialize,
+        renderExisting,
+        isNew,
+        setSeen,
+        editBlog,
+        deleteBlog,
+      } from "./blog.js";
+
+      if (isNew()) {
+        setSeen();
+        initialize();
+      } else {
+        renderExisting();
+      }
+    </script>
+    <h1>CRUD</h1>
+    <ul id="list-container"></ul>
+    <button id="add-btn">Add New Blog</button>
+  </body>
+</html>

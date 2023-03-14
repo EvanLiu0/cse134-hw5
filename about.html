@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M169WZK349"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M169WZK349");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evan Liu's Portfolio</title>
+    <!-- Image Credit: https://stock.adobe.com/images/letter-e-glitch-style-alphabet-modern-font-logo-vector-icon/252746757 -->
+    <link rel="icon" href="./assets/images/favicon-final.webp" />
+    <link rel="stylesheet" href="./assets/styles/about.css" />
+    <style>
+      section {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      window.onload = () => {
+        var i = 0;
+        var txt = "About Me"; /* The text */
+        var speed = 75; /* The speed/duration of the effect in milliseconds */
+
+        typeWriter();
+
+        function typeWriter() {
+          if (i < txt.length) {
+            if (i == 0) {
+              document.getElementById("main-title").innerHTML = txt.charAt(i);
+            } else {
+              document.getElementById("main-title").innerHTML += txt.charAt(i);
+            }
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+      };
+    </script>
+    <script>
+      function openAbout(aboutName) {
+        var i;
+        var x = document.getElementsByClassName("about-container");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(aboutName).style.display = "flex";
+      }
+    </script>
+    <header class="nav-container">
+      <h1 class="title">
+        <a href="./index.html">Evan Liu's Portfolio</a>
+      </h1>
+      <nav>
+        <!-- <picture
+          ><img src="./assets/images/hamburger.png" alt="Hamburger Menu"
+        /></picture> -->
+        <a href="./projects.html">Past Projects</a>
+        <a href="./contact.html">Contact</a>
+        <a class="active" href="./about.html">About</a>
+        <a href="./index.html">Home</a>
+      </nav>
+    </header>
+    <main>
+      <h2 id="main-title">_</h2>
+      <div class="about-container" id="bio-container">
+        <nav id="container-nav">
+          <a class="active" onclick="openAbout('bio-container')">Bio</a>
+          <a onclick="openAbout('skills-container')">Skills</a>
+          <a onclick="openAbout('employment-container')">Employment History</a>
+        </nav>
+        <section>
+          <h4>Bio</h4>
+          <picture>
+            <source
+              media="(max-width: 500px)"
+              srcset="./assets/images/standing.jpg"
+            />
+            <img
+              src="./assets/images/profile.jpeg"
+              alt="Profile Picture Condensed"
+              title="Profile Picture"
+            />
+          </picture>
+          <p>
+            Why, hello again! My name is Evan Liu, and I'm currently a
+            third-year undergraduate student at the
+            <em>University of California, San Diego</em>. I am currently
+            pursuing a B.S. in <em>Cognitive Science</em> with a specialization
+            in <em>Machine Learning and Neural Computation</em>, and I am also
+            double minoring in <em>Computer Science</em> and <em>Design</em>.
+          </p>
+          <p>
+            My drive to pursue a career in software engineering stems from a
+            desire to use technology to <em>meaningfully</em> impact others.
+            Where others see ones and zeroes, I look for opportunities to
+            <em>bring people together</em> and <em>alleviate</em> burdens, and I
+            am always on the lookout for chances to use what I know about human
+            centered design and programming to make the world a
+            <em>better place</em>.
+          </p>
+        </section>
+      </div>
+      <div class="about-container" id="employment-container">
+        <nav id="container-nav">
+          <a onclick="openAbout('bio-container')">Bio</a>
+          <a onclick="openAbout('skills-container')">Skills</a>
+          <a class="active" onclick="openAbout('employment-container')"
+            >Employment History</a
+          >
+        </nav>
+        <section>
+          <h4>Employment History</h4>
+          <p>
+            Click on one of the following menus to learn more about my past work
+            experiences!
+          </p>
+          <hr />
+          <details>
+            <summary><strong>Capital One</strong></summary>
+            <p><em>Duration:</em> June 2023 - August 2023</p>
+            <p><em>Location:</em> McLean, VA</p>
+            <p><em>Position:</em> Software Engineering Intern</p>
+            <p><em>Work Description:</em> Pending</p>
+          </details>
+          <br />
+          <details>
+            <summary><strong>Neon Law Foundation</strong></summary>
+            <p><em>Duration:</em> June 2022 - Present</p>
+            <p><em>Location:</em> Las Vegas, NV</p>
+            <p><em>Position:</em> Software Engineering Intern</p>
+            <p><em>Work Description:</em></p>
+            <ul>
+              <li>
+                Developed an open-source web-based data scraping application
+                using Python BeautifulSoup library
+              </li>
+              <li>
+                Automated company's email and retail workflows using the Zapier
+                and Front software platforms
+              </li>
+              <li>
+                Hosted seminar at University of California, San Diego on the
+                topic of web scraping
+              </li>
+            </ul>
+          </details>
+          <br />
+          <details>
+            <summary>
+              <strong>St. James Episcopal Church Food Locker</strong>
+            </summary>
+            <p><em>Duration:</em> June 2019 - October 2019</p>
+            <p><em>Location:</em> South Pasadena, CA</p>
+            <p><em>Position:</em> Intern</p>
+            <p><em>Work Description:</em></p>
+            <ul>
+              <li>
+                Created 2 spreadsheets to track food inventory of the church's
+                food pantry for the year of 2019
+              </li>
+              <li>
+                Proposed and implemented new weekly food distribution quotas in
+                response to past distribution and visitation metrics
+              </li>
+              <li>
+                Coordinated and participated in the church's weekly food
+                distributions serving 30 families weekly
+              </li>
+            </ul>
+          </details>
+          <br />
+          <details>
+            <summary><strong>USC Keck School of Medicine</strong></summary>
+            <p><em>Duration:</em> June 2018 - August 2018</p>
+            <p><em>Location:</em> Los Angeles, CA</p>
+            <p><em>Position:</em> Intern</p>
+            <p><em>Work Description:</em></p>
+            <ul>
+              <li>
+                Constructed spreadsheets to store academic and
+                graduation-related information of over 24000 USC alumni
+              </li>
+              <li>
+                Digitized and updated university's physical alumni information
+                records spanning from 1970 to 2018 using Excel
+              </li>
+            </ul>
+          </details>
+        </section>
+      </div>
+      <div class="about-container" id="skills-container">
+        <nav id="container-nav">
+          <a onclick="openAbout('bio-container')">Bio</a>
+          <a class="active" onclick="openAbout('skills-container')">Skills</a>
+          <a onclick="openAbout('employment-container')">Employment History</a>
+        </nav>
+        <section>
+          <h4>Skills</h4>
+          <p>
+            Here are some of the technical skills I've amassed in my study of
+            software engineering:
+          </p>
+          <table>
+            <caption>
+              Proficiency List
+            </caption>
+            <colgroup>
+              <col class="kind" span="2" />
+              <col class="description" />
+            </colgroup>
+            <tr>
+              <th>Skill</th>
+              <th>Years of Experience</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>Java</td>
+              <td>8</td>
+              <td>
+                Proficiency With Object-Oriented Design, Polymorphism,
+                Inheritance
+              </td>
+            </tr>
+            <tr>
+              <td>C++</td>
+              <td>3</td>
+              <td>Proficiency Using Pointers in Combination With Classes</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>3</td>
+              <td>
+                Proficiency Using Pointers in Combination With Memory Management
+              </td>
+            </tr>
+            <tr>
+              <td>Python</td>
+              <td>3</td>
+              <td>
+                Used to Develop Complex Web-Based Applications in Professional
+                Context
+              </td>
+            </tr>
+            <tr>
+              <td>Figma</td>
+              <td>3</td>
+              <td>
+                Proficiency in Developing User Interfaces and Website
+                Prototyping
+              </td>
+            </tr>
+            <tr>
+              <td>Android Studio</td>
+              <td>3</td>
+              <td>
+                Proficiency in Developing Complex Mobile Applications Relying on
+                Third Party Navigation APIs
+              </td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </main>
+    <hr />
+    <footer>
+      <h3>Let's Get in Touch!</h3>
+      <a href="https://www.linkedin.com/in/evan-liu-195bba22a"
+        ><img
+          class="footer-icon"
+          src="./assets/images/linkedin-white.webp"
+          alt="Linkedin Logo"
+          title="LinkedIn"
+      /></a>
+      <!-- Image Credit: https://www.pngkey.com/maxpic/u2w7q8w7a9u2r5t4/ -->
+      <a href="https://github.com/EvanLiu0"
+        ><img
+          class="footer-icon"
+          src="./assets/images/github-white.webp"
+          alt="GitHub Logo"
+          title="GitHub"
+      /></a>
+    </footer>
+  </body>
+</html>

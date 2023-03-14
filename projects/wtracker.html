@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Image Credit: https://stock.adobe.com/images/letter-e-glitch-style-alphabet-modern-font-logo-vector-icon/252746757 -->
+    <link rel="icon" href="../assets/images/favicon-final.webp" />
+    <link rel="stylesheet" href="../assets/styles/wtracker.css" />
+    <title>Evan Liu's Portfolio</title>
+  </head>
+  <body>
+    <script>
+      window.onload = () => {
+        var i = 0;
+        var txt = "Workout Tracker Web Application"; /* The text */
+        var speed = 75; /* The speed/duration of the effect in milliseconds */
+
+        typeWriter();
+
+        function typeWriter() {
+          if (i < txt.length) {
+            if (i == 0) {
+              document.getElementById("main-title").innerHTML = txt.charAt(i);
+            } else {
+              document.getElementById("main-title").innerHTML += txt.charAt(i);
+            }
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+      };
+    </script>
+    <header class="nav-container">
+      <h1 class="title">
+        <a href="../index.html">Evan Liu's Portfolio</a>
+      </h1>
+      <nav>
+        <!-- <picture
+          ><img src="./assets/images/hamburger.png" alt="Hamburger Menu"
+        /></picture> -->
+        <a class="active" href="../projects.html">Past Projects</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html">Home</a>
+      </nav>
+    </header>
+    <main>
+      <h2 id="main-title">_</h2>
+      <aside>
+        <p>
+          <i>
+            "How might we assist UCSD gym-goers develop and keep track of
+            workout routines that fit their personal needs and capabilities?"
+          </i>
+        </p>
+      </aside>
+      <!-- Image Credit: https://www.society19.com/free-things-to-do-around-uc-san-diego/ -->
+      <img src="../assets/images/gym.webp" alt="Gym Floor Graphic" />
+      <br />
+      <p><strong>Objectives</strong></p>
+      <ol>
+        <li>
+          Create a secure, contained means of creating personalized workout
+          routines
+        </li>
+        <li>Enable users to create custom workout plans</li>
+        <li>
+          Provide workout templates for users who are new to the gym or to UCSD
+          gyms in particular
+        </li>
+      </ol>
+      <br />
+      <p><strong>Workout Logging Demo</strong></p>
+      <p>
+        The recording below demonstrates the process by which a user can record
+        the completion of custom exercises.
+      </p>
+      <video width="620" height="440" controls>
+        <source src="../assets/videos/logging-demo.mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <br />
+      <br />
+      <p><strong>Code Snippet Example: Finding Relevant URLs</strong></p>
+      <p>
+        The following code snippet demonstrates the primary way in which the
+        application's frontend interfaces communicates with its backend API.
+        Similar axios calls are used to retrieve user data, record new data, and
+        even load information about different preset exercises that can be
+        recorded. Ever want to learn how to perform a judo flip? One call to the
+        workout API can tell you that information in a matter of seconds.
+        However, it still can't help you perform said flip...
+      </p>
+      <section>
+        <code>
+          const res = axios .post("http://localhost:8080/api/test/getInfo", {
+          user: String(username), }) .then((response) => {
+          console.log(response.data.message); }) .catch((error) => { if
+          (error.response) { console.log(error.response.data); } });
+        </code>
+      </section>
+    </main>
+    <footer>
+      <h3>Let's Get in Touch!</h3>
+      <!-- Image Credit: https://iconsplace.com/white-icons/linkedin-icon-18/ -->
+      <a href="https://www.linkedin.com/in/evan-liu-195bba22a"
+        ><img
+          class="footer-icon"
+          src="../assets/images/linkedin-white.webp"
+          alt="Linkedin Logo"
+          title="LinkedIn"
+      /></a>
+      <!-- Image Credit: https://www.pngkey.com/maxpic/u2w7q8w7a9u2r5t4/ -->
+      <a href="https://github.com/EvanLiu0"
+        ><img
+          class="footer-icon"
+          src="../assets/images/github-white.webp"
+          alt="GitHub Logo"
+          title="GitHub"
+      /></a>
+    </footer>
+  </body>
+</html>

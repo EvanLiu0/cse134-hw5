@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Image Credit: https://stock.adobe.com/images/letter-e-glitch-style-alphabet-modern-font-logo-vector-icon/252746757 -->
+    <link rel="icon" href="../assets/images/favicon-final.webp" />
+    <link rel="stylesheet" href="../assets/styles/zooseeker.css" />
+    <title>Evan Liu's Portfolio</title>
+  </head>
+  <body>
+    <script>
+      window.onload = () => {
+        var i = 0;
+        var txt = "San Diego ZooSeeker"; /* The text */
+        var speed = 75; /* The speed/duration of the effect in milliseconds */
+
+        typeWriter();
+
+        function typeWriter() {
+          if (i < txt.length) {
+            if (i == 0) {
+              document.getElementById("main-title").innerHTML = txt.charAt(i);
+            } else {
+              document.getElementById("main-title").innerHTML += txt.charAt(i);
+            }
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+      };
+    </script>
+    <header class="nav-container">
+      <h1 class="title">
+        <a href="../index.html">Evan Liu's Portfolio</a>
+      </h1>
+      <nav>
+        <!-- <picture
+          ><img src="./assets/images/hamburger.png" alt="Hamburger Menu"
+        /></picture> -->
+        <a class="active" href="../projects.html">Past Projects</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html">Home</a>
+      </nav>
+    </header>
+    <main>
+      <h2 id="main-title">_</h2>
+      <aside>
+        <p>
+          <i>
+            "How might we assist new visitors of the San Diego Zoo in deciding
+            what exhibits to see and how to navigate to each one?"
+          </i>
+        </p>
+      </aside>
+      <!-- Image Credit: https://zoo.sandiegozoo.org/plan-your-visit -->
+      <img
+        src="../assets/images/zoo.webp"
+        alt="Zoo Entrance Graphic"
+        title="Zoo Entrance"
+      />
+      <p><strong>Objectives</strong></p>
+      <ol>
+        <li>
+          Provide a means of allowing zoo visitors to keep track of the exhibits
+          that they want to see during their trip
+        </li>
+        <li>
+          Generate optimized routes to take visitors through each of their
+          selected exhibits in as little time as possible
+        </li>
+        <li>
+          Create visual displays of the qualitative results on each page to
+          summarize found identity
+        </li>
+      </ol>
+      <p><strong>Primary User Interfaces</strong></p>
+      <p>
+        The following user interfaces, whose functions are outlined below, were
+        constructed using Android Studio. While the implementation details of
+        each cannot be expanded upon due to academic integrity concerns, both
+        user interfaces rely on frontends composed primarily of HTML-like tags
+        and CSS-like styling, as well as backends that utilize calls to a local
+        database to store and retrieve user data, as well as those of the zoo's
+        exhibits. The optimized directions found in the second figure below are
+        generated according to a recursive, greedy graph traversal algorithm
+        that charts every possible route between two exhibits and returns the
+        one with the lowest weight.
+      </p>
+      <figure>
+        <img
+          src="../assets/images/zooseeker-home.webp"
+          alt="ZooSeeker Home Page"
+          title="ZooSeeker Home Page"
+        />
+        <figcaption>
+          <b>Figure 1:</b> Home page for planning exhibit itinerary <br />
+        </figcaption>
+      </figure>
+      <figure>
+        <img
+          src="../assets/images/zooseeker-plan.webp"
+          alt="ZooSeeker Directions Page"
+          title="ZooSeeker Directions Page"
+        />
+        <figcaption>
+          <b>Figure 2:</b> Directions page for navigating between exhibits
+        </figcaption>
+      </figure>
+    </main>
+    <footer>
+      <h3>Let's Get in Touch!</h3>
+      <!-- Image Credit: https://iconsplace.com/white-icons/linkedin-icon-18/ -->
+      <a href="https://www.linkedin.com/in/evan-liu-195bba22a"
+        ><img
+          class="footer-icon"
+          src="../assets/images/linkedin-white.webp"
+          alt="Linkedin Logo"
+          title="LinkedIn"
+      /></a>
+      <!-- Image Credit: https://www.pngkey.com/maxpic/u2w7q8w7a9u2r5t4/ -->
+      <a href="https://github.com/EvanLiu0"
+        ><img
+          class="footer-icon"
+          src="../assets/images/github-white.webp"
+          alt="GitHub Logo"
+          title="GitHub"
+      /></a>
+    </footer>
+  </body>
+</html>

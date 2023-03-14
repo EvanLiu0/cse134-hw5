@@ -1,0 +1,88 @@
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+li {
+  margin: 10ch 10ch 10ch 10ch;
+  padding: 2ch;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  line-height: 4ch;
+  border: 2px dashed rgb(255, 102, 0);
+  background-color: rgb(255, 215, 141);
+  border-radius: 2ch;
+}
+
+ul {
+  max-width: 90ch;
+  list-style: none;
+  text-align: center;
+  background-color: white;
+  max-height: 60ch;
+  overflow: scroll;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 2ch;
+}
+
+#add-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover {
+  cursor: pointer;
+}
+
+.edit-btn {
+  font-style: normal;
+  margin-right: 2ch;
+  font-size: 2rem;
+}
+
+.delete-btn {
+  margin-left: 2ch;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+#add-btn {
+  margin-top: 6ch !important;
+  margin-bottom: 2ch !important;
+  background-color: rgb(255, 255, 123);
+  box-shadow: none;
+  border: 1px solid black;
+  width: 30ch !important;
+  padding: 1rem 0rem;
+  border-radius: 2rem;
+}
+
+hr {
+  width: 50%;
+  margin-bottom: 6ch;
+}
+
+dialog {
+  background-color: rgb(255, 255, 171);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+dialog > button {
+  background-color: rgb(255, 239, 138);
+  margin: 2ch 2ch;
+}
+
+h2 {
+  margin: 3ch;
+}
+
+img {
+  height: 10ch;
+}
+
+h1 {
+  line-height: 0 !important;
+  margin-top: 3.7rem !important;
+  margin-bottom: 1rem !important;
+}

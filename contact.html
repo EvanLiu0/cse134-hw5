@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M169WZK349"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M169WZK349");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Image Credit: https://stock.adobe.com/images/letter-e-glitch-style-alphabet-modern-font-logo-vector-icon/252746757 -->
+    <link rel="icon" href="./assets/images/favicon-final.webp" />
+    <link rel="stylesheet" href="./assets/styles/contact.css" />
+    <title>Evan Liu's Portfolio</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.js"></script>
+    <script>
+      window.onload = () => {
+        var i = 0;
+        var txt = "Contact Me"; /* The text */
+        var speed = 75; /* The speed/duration of the effect in milliseconds */
+
+        typeWriter();
+
+        function typeWriter() {
+          if (i < txt.length) {
+            if (i == 0) {
+              document.getElementById("main-title").innerHTML = txt.charAt(i);
+            } else {
+              document.getElementById("main-title").innerHTML += txt.charAt(i);
+            }
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+      };
+    </script>
+    <script type="module">
+      import { sendForm } from "./contact.js";
+      document.getElementsByTagName("form")[0].onsubmit = (event) => {
+        sendForm();
+        event.preventDefault();
+      };
+    </script>
+    <header class="nav-container">
+      <h1 class="title">
+        <a href="./index.html">Evan Liu's Portfolio</a>
+      </h1>
+      <nav>
+        <!-- <picture
+          ><img src="./assets/images/hamburger.png" alt="Hamburger Menu"
+        /></picture> -->
+        <a href="./projects.html">Past Projects</a>
+        <a class="active" href="./contact.html">Contact</a>
+        <a href="./about.html">About</a>
+        <a href="./index.html">Home</a>
+      </nav>
+    </header>
+    <main>
+      <h2 id="main-title">_</h2>
+      <p>
+        I'm always eager to make new connections.
+        <span id="impact">Let's talk!</span>
+      </p>
+      <form>
+        <fieldset>
+          <h4 id="form-title-contact">Contact Form</h4>
+          <div class="label-input-container">
+            <label for="mtype">Message Type: </label>
+            <select id="mtype" name="mtype">
+              <optgroup label="Inquiries">
+                <option value="General Inquiry">
+                  I had a question about something you mentioned...
+                </option>
+                <option value="Job Inquiry">
+                  I have an employment proposition...
+                </option>
+              </optgroup>
+              <optgroup label="Support">
+                <option value="Site Down">
+                  I'm having technical problems with the site...
+                </option>
+                <option value="Suggestion">
+                  I have an idea of how to improve this site...
+                </option>
+              </optgroup>
+              <optgroup label="Other">
+                <option value="Other">Other</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="label-input-container">
+            <label for="title">Title: </label>
+            <input
+              list="titles"
+              name="title"
+              id="title"
+              placeholder="Ex: Mr."
+            />
+            <datalist id="titles">
+              <option value="Mr."></option>
+              <option value="Ms."></option>
+            </datalist>
+          </div>
+          <div class="label-input-container">
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Ex: John Smith"
+            />
+          </div>
+          <div class="label-input-container">
+            <label for="email">Email: </label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Ex: jsmith@gmail.com"
+            />
+          </div>
+          <div class="label-input-container">
+            <label for="message">Message: </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write Your Message Here..."
+            ></textarea>
+          </div>
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    </main>
+    <hr />
+    <footer>
+      <div id="footer-text">
+        <h3>Let's Get in Touch!</h3>
+        <!-- Image Credit: https://iconsplace.com/white-icons/linkedin-icon-18/ -->
+        <!-- Image Credit: https://iconsplace.com/white-icons/linkedin-icon-18/ -->
+        <a href="https://www.linkedin.com/in/evan-liu-195bba22a"
+          ><img
+            class="footer-icon"
+            src="./assets/images/linkedin-white.webp"
+            alt="Linkedin Logo"
+            title="LinkedIn"
+        /></a>
+        <!-- Image Credit: https://www.pngkey.com/maxpic/u2w7q8w7a9u2r5t4/ -->
+        <a href="https://github.com/EvanLiu0"
+          ><img
+            class="footer-icon"
+            src="./assets/images/github-white.webp"
+            alt="GitHub Logo"
+            title="GitHub"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>

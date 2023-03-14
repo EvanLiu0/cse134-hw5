@@ -1,0 +1,45 @@
+fieldset {
+  max-width: 60ch;
+  margin-bottom: 3ch;
+}
+
+form section {
+  padding: 1ch;
+}
+
+input[type="button"] {
+  margin: 2ch 1ch;
+}
+
+tr,
+td {
+  border: 1px solid #000000;
+  padding: 1ch;
+}
+
+#titles {
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(110, 156, 255) !important;
+}
+
+#titles:hover {
+  background-color: rgb(110, 156, 255) !important;
+}
+
+table {
+  border-collapse: collapse;
+  max-width: 80ch;
+}
+
+tr:nth-child(odd) {
+  background-color: #e9e9e9;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+#radio-container {
+  padding: 3ch 0;
+}
