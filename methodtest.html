@@ -29,43 +29,43 @@
           <label for="id">Article Body: </label>
           <textarea id="article_body" name="article_body"></textarea>
         </section>
-        <section id="radio-container">
-          <input type="radio" id="XHR" name="reqtype" checked="true" />
-          <label for="XHR">XMLHTTPRequest</label>
-          <input type="radio" id="Fetch" name="reqtype" />
-          <label for="Fetch">Fetch</label>
-        </section>
-        <input type="hidden" id="date" name="date" />
-        <input
-          type="button"
-          id="getBtn"
-          name="getBtn"
-          value="GET"
-          onclick="sendThatStuff('get')"
-        />
-        <input
-          type="button"
-          id="postBtn"
-          name="postBtn"
-          value="POST"
-          onclick="sendThatStuff('post')"
-        />
-        <input
-          type="button"
-          id="putBtn"
-          name="putBtn"
-          value="PUT"
-          onclick="sendThatStuff('put')"
-        />
-        <input
-          type="button"
-          id="deleteBtn"
-          name="deleteBtn"
-          value="DELETE"
-          onclick="sendThatStuff('delete')"
-        />
       </fieldset>
     </form>
+    <section id="radio-container">
+      <input type="radio" id="XHR" name="reqtype" checked="true" />
+      <label for="XHR">XMLHTTPRequest</label>
+      <input type="radio" id="Fetch" name="reqtype" />
+      <label for="Fetch">Fetch</label>
+    </section>
+    <input type="hidden" id="date" name="date" />
+    <input
+      type="button"
+      id="getBtn"
+      name="getBtn"
+      value="GET"
+      onclick="sendThatStuff('get')"
+    />
+    <input
+      type="button"
+      id="postBtn"
+      name="postBtn"
+      value="POST"
+      onclick="sendThatStuff('post')"
+    />
+    <input
+      type="button"
+      id="putBtn"
+      name="putBtn"
+      value="PUT"
+      onclick="sendThatStuff('put')"
+    />
+    <input
+      type="button"
+      id="deleteBtn"
+      name="deleteBtn"
+      value="DELETE"
+      onclick="sendThatStuff('delete')"
+    />
     <output id="response" name="response">&nbsp;</output>
   </body>
 </html>

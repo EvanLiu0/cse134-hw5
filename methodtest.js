@@ -62,7 +62,7 @@ export function sendThatStuff(action) {
     else {
       xhr.open(`${action}`, `${target}`);
       xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xhr.setRequestHeader("Content-type", "application/json");
+      // xhr.setRequestHeader("Content-type", "application/json");
       xhr.send(quer);
     }
   } else if (document.getElementById("Fetch").checked) {
