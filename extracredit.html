@@ -8,10 +8,15 @@
     <title>Web Component</title>
   </head>
   <body>
-    <script type="module">
-      import { ButtonCount } from "./ButtonCount.js";
-      window.customElements.define("button-count", ButtonCount);
-    </script>
-    <button-count />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script type="module" src="extracredit.js"></script>
+    <div id="count_button_container"></div>
   </body>
 </html>
