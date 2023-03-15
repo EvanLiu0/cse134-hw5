@@ -19,3 +19,4 @@ class ButtonCount extends HTMLElement {
 }
 
 window.customElements.define("button-count", ButtonCount);
+document.body.appendChild(document.createElement("button-count"));
