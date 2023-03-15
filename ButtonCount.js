@@ -1,4 +1,4 @@
-export class ButtonCount extends HTMLElement {
+class ButtonCount extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -17,3 +17,5 @@ export class ButtonCount extends HTMLElement {
     });
   }
 }
+
+window.customElements.define("button-count", ButtonCount);

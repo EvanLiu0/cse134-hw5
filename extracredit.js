@@ -15,6 +15,6 @@ class ButtonCount extends React.Component {
   }
 }
 
-const domContainer = document.querySelector("#count_button_container");
+const domContainer = document.querySelector("#react_count_button_container");
 const root = ReactDOM.createRoot(domContainer);
 root.render(e(ButtonCount));
